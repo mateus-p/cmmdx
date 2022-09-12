@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ES2017",
+    "types": ["@types/node", "@types/react"],
+    "moduleResolution": "node",
+    "esModuleInterop": true
+  },
+  "files": ["index.ts"]
+}
+

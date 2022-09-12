@@ -1,0 +1,36 @@
+{
+  "name": "cmmdx",
+  "version": "0.1.14",
+  "type": "module",
+  "bin": "./index.js",
+  "files": [
+    "index.js",
+    "index.tsx",
+    "index.d.ts"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@mdx-js/mdx": "^2.1.3",
+    "dotenv": "^16.0.2",
+    "glob": "^8.0.3",
+    "lodash.camelcase": "^4.3.0",
+    "lodash.upperfirst": "^4.3.1",
+    "log-symbols": "^5.1.0",
+    "source-map": "^0.7.4"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/lodash.camelcase": "^4.3.7",
+    "@types/lodash.upperfirst": "^4.3.7",
+    "@types/node": "^18.7.6",
+    "@types/react": ">=16",
+    "typescript": "^4.8.3"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "scripts": {
+    "prepack": "tsc"
+  }
+}
+
