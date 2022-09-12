@@ -13,7 +13,12 @@ export default function MDXLoader<K extends MDXK = MDXK>(
 ): React.ReactNode {
   const { content, ...restProps } = props;
 
-  // @ts-ignore
-  return content.map((c) => createElement(c, { key: c.name, ...restProps }));
+  return content.map((c) =>
+    // @ts-ignore
+    createElement(c, {
+      key: c.name,
+      ...restProps,
+    })
+  );
 }
 

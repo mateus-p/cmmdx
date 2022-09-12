@@ -7,8 +7,7 @@ export type Elements<K extends MDXK> = K extends keyof JSX.IntrinsicElements
   : { [key: string]: any };
 
 export type MDXProps<K extends MDXK = undefined> = {
-  components?: Record<string, React.FC<any>>;
-  wrapper?: K;
+  components?: Record<string, React.FC<any>> & { wrapper?: K };
 } & Elements<K>;
 
 export type MDXLoaderProps<K extends MDXK> = MDXProps<K> & {

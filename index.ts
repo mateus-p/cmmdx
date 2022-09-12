@@ -79,11 +79,11 @@ async function main() {
 
     const result = value
       .toString()
-      .replace("(props) {", "(props:MDXProps){")
-      .replace("(props = {}) {", "(props:MDXProps){")
-      .replace("id, component", "id:string, component:boolean")
       .replace(" MDXContent(", ` ${exportzName}(`)
-      .replace("MDXContent;", `${exportzName};`);
+      .replace("MDXContent;", `${exportzName};`)
+      .replace("(props) {", "<K extends MDXK>(props:MDXProps<K>){")
+      .replace("(props = {}) {", "<K extends MDXK>(props:MDXProps<K>){")
+      .replace("id, component", "id:string, component:boolean");
 
     exportz.push({
       name: exportzName,
@@ -93,7 +93,7 @@ async function main() {
     await writeFile(
       `${outDir}/${outFile}`,
       `
-    import { MDXProps } from './index.d';
+    import { MDXProps, MDXK } from './index.d';
     
     ${result}
     `
@@ -113,13 +113,13 @@ async function main() {
             .join("\n")}
 
           ${exportz
-            .map((x) => `export const ${x.name} = _${x.name};`)
+            .map((x) => `export {default as ${x.name}} from './${x.file}'`)
             .join("\n")}
         `
       )
       .replace(
         "//?list",
-        exportz.map((x) => `_${x.name}`).join(" as unknown as FC<MDXProps>,\n")
+        exportz.map((x) => `_${x.name} as unknown as FC<any>`).join(",\n")
       )
   );
 
