@@ -21,9 +21,9 @@ config({
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const {
-  CMMDX_OUT_DIR: outDir = "./content",
-  CMMDX_IN: input = "./mdx/*.mdx",
-  CMMDX_CLEAN_OUT: cleanOutput = "true",
+  OUT_DIR: outDir = "./content",
+  INPUT: input = "./mdx/*.mdx",
+  CLEAN_OUT: cleanOutput = "true",
 } = process.env;
 
 const globP = promisify(glob.default);
@@ -133,4 +133,3 @@ main().catch((err) => {
   error(err);
   process.exit(1);
 });
-
