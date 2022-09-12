@@ -1,6 +1,6 @@
 {
   "name": "cmmdx",
-  "version": "0.1.3",
+  "version": "0.1.301",
   "type": "module",
   "bin": "./index.js",
   "files": [
@@ -37,3 +37,4 @@
     "prepack": "tsc"
   }
 }
+
