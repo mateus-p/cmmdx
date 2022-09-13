@@ -95,7 +95,7 @@ export default function main(
     writeFileSync(
       `${outDir}/${outFile}`,
       `
-    import { MDXProps, MDXK } from 'cmmdx/mdx.d';
+    import type { MDXProps, MDXK } from 'cmmdx/mdx.d';
     
     ${result}
     `

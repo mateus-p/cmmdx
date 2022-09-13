@@ -1,6 +1,6 @@
 {
   "name": "cmmdx",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "bin": "./build/bin.mjs",
   "engines": {
     "node": ">=16"
