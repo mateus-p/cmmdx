@@ -1,6 +1,6 @@
 {
   "name": "cmmdx",
-  "version": "0.2.1",
+  "version": "0.2.11",
   "bin": "./build/bin.mjs",
   "engines": {
     "node": ">=16"
@@ -42,3 +42,4 @@
     "prepack": "tsc"
   }
 }
+
