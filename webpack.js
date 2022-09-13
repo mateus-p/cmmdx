@@ -21,7 +21,7 @@ module.exports = class CMMDXPlugin {
   apply(compiler) {
     const logger = compiler.getInfrastructureLogger(pluginName);
 
-    const hooks = [compiler.hooks.watchRun, compiler.hooks.beforeRun];
+    const hooks = [compiler.hooks.beforeRun, compiler.hooks.beforeCompile];
 
     hooks.forEach((hook) => {
       hook.tapPromise(pluginName, async () => {
