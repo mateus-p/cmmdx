@@ -1,12 +1,16 @@
 {
   "name": "cmmdx",
-  "version": "0.1.302",
-  "type": "module",
-  "bin": "./index.js",
+  "version": "0.2.0",
+  "bin": "./build/bin.js",
+  "engines": {
+    "node": ">=16"
+  },
   "files": [
-    "index.js",
-    "index.tsx",
-    "index.d.ts"
+    "build",
+    "templates",
+    "mdx.d.ts",
+    "webpack.js",
+    "webpack.d.ts"
   ],
   "license": "MIT",
   "repository": {
@@ -28,7 +32,8 @@
     "@types/lodash.upperfirst": "^4.3.7",
     "@types/node": "^18.7.6",
     "@types/react": ">=16",
-    "typescript": "^4.8.3"
+    "typescript": "^4.8.3",
+    "webpack": "^5.74.0"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -37,4 +42,3 @@
     "prepack": "tsc"
   }
 }
-

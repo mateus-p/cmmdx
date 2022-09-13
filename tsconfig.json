@@ -1,12 +1,17 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
+    "module": "ES2020",
     "target": "ES2017",
     "types": ["@types/node", "@types/react"],
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "esModuleInterop": true,
-    "newLine": "lf"
+    "newLine": "lf",
+    "outDir": "build",
+    "declaration": true,
+    "rootDir": "src",
+    "allowJs": true,
+    "checkJs": false
   },
-  "files": ["index.ts"]
+  "exclude": ["node_modules", "templates", "build", "webpack.*"]
 }
 

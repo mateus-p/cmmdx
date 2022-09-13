@@ -1,6 +1,6 @@
-import type { MDXK, MDXLoaderProps, MDXProps } from "./index.d";
-import type { FC } from "react";
-import React, { createElement } from "react";
+import type { MDXK, MDXLoaderProps, MDXProps } from "cmmdx/mdx.d";
+import type { FC, ReactNode } from "react";
+import { createElement } from "react";
 
 //?expo
 
@@ -10,7 +10,7 @@ export const asList: FC<MDXProps<MDXK>>[] = [
 
 export default function MDXLoader<K extends MDXK = MDXK>(
   props: MDXLoaderProps<K>
-): React.ReactNode {
+): ReactNode {
   const { content, ...restProps } = props;
 
   return content.map((c) =>
